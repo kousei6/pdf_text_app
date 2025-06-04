@@ -5,6 +5,7 @@
 * **Python**: プログラミング言語
 * **Streamlit**: Webアプリケーションフレームワーク
 * **PyPDF2**: PDFファイルの読み書きライブラリ
+* **PyCryptodome**: PDFの暗号化/復号化処理に使用されるライブラリ
 
 ### プロジェクトの概要
 
@@ -72,4 +73,6 @@ streamlit run app.py
 * **`PyPDF2.errors.PdfReadError` エラーが出る**:
     これは、アップロードしたPDFファイルが破損しているか、PyPDF2がサポートしていない形式である可能性が高いです。別のPDFファイルで試すか、PDFビューアでファイルが正常に開けるかを確認してみてください。
 
-
+* **予期せぬエラーが発生しました: PyCryptodome is required for AES algorithm エラーが出る**:
+このエラーは、PDFファイルが暗号化されており、その復号化に必要なPyCryptodomeライブラリがインストールされていない場合に発生します。
+pip install pycryptodome を実行して、ライブラリをインストールしてください。requirements.txtにpycryptodomeを追加し、pip install -r requirements.txtを再実行することをお勧めします。
